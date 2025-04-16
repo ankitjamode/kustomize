@@ -5,15 +5,15 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchlabels:
+    matchLabels:
       app: nginx
-    template:
-      meatadata:
-        labels:
-          app: nginx
-      spec:
-        containers:
-          - name: nginx
-            image: nginx:latest
-            ports:
-              - containerPort: 80         
+  template:
+    metadata:           # Corrected spelling here
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80
